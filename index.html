@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Maze || A Mind Game || Made by Aasheesh</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leopard@^1/dist/index.min.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div class="w3-center">
+      <button class="w3-button w3-black" style="width:100%"><p class="w3-black" w3-hover:white></button>
+      <p><b>Welcome</b><br>To the Maze<br>Made by <a href="//scratch.mit.edu/users/NorthenSuperCoders" target="_blank">Aasheesh!</a><br>Just click the Play button to play!<br><br>
+        <video width="480" height="360" controls="false"autoplay>
+            <source src="video.webm"/>
+            Your Browser does not support the video tag
+            </video> <br><br>
+        
+         <button
+      onclick="document.getElementById('modal01').style.display='block'" class="w3-button w3-blue" id="greenflag" style="width:100%">
+      Play
+    </button>
+    
+    <a href="//scratch.mit.edu/users/NorthenSuperCoders"><button class="w3-button w3-black" style="width:100%">On Scratch</button></a>
+     <br><br><br>
+
+  </div>
+
+    <div id="modal01" class="w3-modal">
+      <div class="w3-modal-content" style="border:oldlace">
+        <center>
+        <button class="w3-button w3-black" id="greenFlag" style="width:100%">Play/Restart</button>
+        
+        <span
+          onclick="document.getElementById('modal01').style.display='none'"
+          class="w3-button w3-display-topright w3-white w3-hover:black"
+          >&times;</span
+        ><br /><br /><br />
+        <div id="project"></div>
+        <script type="module">
+          import project from "./index.js";
+
+          project.attach("#project");
+
+          document.querySelector("#greenFlag").addEventListener("click", () => {
+            project.greenFlag();
+          });
+
+          // Autoplay
+          project.greenFlag();
+        </script>
+      </div>
+    </center>
+    </div>
+    
+        
+  </body>
+</html>
